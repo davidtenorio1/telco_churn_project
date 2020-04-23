@@ -31,6 +31,8 @@ split_scale.py is a file that includes two functions:
 split_my_data function does a train, test split where train = .80 and sets a random state = 123
 standard_scaler function takes in a dataframe and scales it using the standard scaler. It returns a dataframe with the scaled data.
 
-acquire.py is a file with two functions:
+acquire.py is a file with one function:
 get_telco_data function reads in the database from sql. It returns all columns and joins all tables to ensure all data is brought in. This function does not require an input and will return a single dataframe that includes all data from the telco database.
+
+prepare.py is a file with one function:
 prep_telco_data function takes in the telco data and preps it for exploration. it does so by removing columns customer_id,contract_type, internet_service_type,and payment_type. These columns will not be useful in exploration. The function also converts the data type of the total_charges column from a string to a float. Lastly, this function encodes the following columns into 0's and 1's: gender, partner, dependents, phone_service,multiple_lines, online_security, online_backup,device_protection,tech_support,streaming_tv, streaming_movies, paperless_billing, and churn
